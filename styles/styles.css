@@ -2,6 +2,7 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
 }
+img {display: block;}
 .container {
 
     margin: 0 auto;
@@ -13,6 +14,12 @@ body {
 }
 *, ::after, ::before {
     box-sizing: border-box;
+}
+
+*:hover,
+*:focus {
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
 }
 /*header section*/
 
@@ -45,6 +52,14 @@ body {
     font-family: 'Raleway', sans-serif;
     color: black;
 }
+.studio-header-border::after {
+    content: "";
+    border-bottom: 2px;
+    border-color: #2196F3;
+    position: absolute;
+    bottom: 0;
+
+}
 .nav-list {
     display: flex;
     list-style: none;
@@ -58,6 +73,7 @@ body {
     margin-right: 50px;
 }
 .nav-link {
+    position: relative;
     display: block;
     text-decoration: none;
     font-weight: 500;
@@ -174,6 +190,7 @@ body {
 }
 .hero-button:hover {
     background: #188CE8;
+    cursor: pointer;
 }
 .hero-heading {
     /* display: inline-block; */
@@ -301,7 +318,26 @@ body {
     color: #212121;
 }
 .work-element {
+    position: relative;
     margin-left: 30px;
+}
+.work-text {
+    margin: 0;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 50%;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    background-color: rgba(47, 48, 58, 0.8);
+    color: #FFFFFF;
+    transform: translateX(-50%);
 }
 
 /*team-section*/
@@ -578,4 +614,58 @@ body {
     fill: #FFFFFF;
     height: 20px;
     width: 20px;
+}
+
+/* modal */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.modal {
+    position: absolute;
+    width: 528px;
+    height: 581px;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+.close-modal {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    fill: black;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.close-modal:hover,
+.close-modal:focus {
+    background-color: #2196F3;
+    cursor: pointer;
+}
+.close-modal:hover .modal-close-icon,
+.close-modal:focus .modal-close-icon {
+    fill: #FFFFFF;
+}
+.modal-close-icon {
+    width: 11px;
+    height: 11px;
+}
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }

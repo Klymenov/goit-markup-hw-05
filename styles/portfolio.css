@@ -1,18 +1,19 @@
+html {
+    box-sizing: border-box;
+}
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
 }
+*, *:after, *:before {
+    box-sizing: border-box;
+}
 .container {
     width: 1200px;
-    padding: 0px 15px;
-    margin: 0px auto;
+    padding: 0 15px;
+    margin: 0 auto;
 }
-* {
-    box-sizing: border-box;
-}
-*, ::after, ::before {
-    box-sizing: border-box;
-}
+
 /*header section*/
 
 
@@ -263,12 +264,16 @@ button {
     background: #FFFFFF;
     /* border: 1px solid #EEEEEE; */
     /* box-sizing: border-box; */
+    width: 370px;
 }
 .card-element:nth-child(3n) {
     margin-right: 0px;
 }
 .card-element:nth-last-child(-n + 3) {
     margin-bottom: 0px;
+}
+.card-img {
+    display: block;
 }
 .card-text {
     margin: 0;
@@ -291,13 +296,21 @@ button {
     height: 294px;
     font-style: normal;
     font-weight: 400;
-    font-size: 17px;
+    font-size: 18px;
     line-height: 28px;
     letter-spacing: 0.03em;
-    /* overflow: auto; */
+
+    transform: translateY(100%);
+    transition: transform 500ms linear;
 }
 .team-list-img {
     display: flex;
+    position: relative;
+    overflow: hidden;
+}
+.card-link:hover .card-overlay,
+.card-link:focus .card-overlay {
+    transform: translateY(0%);
 }
 .card-heading {
     display: flex;

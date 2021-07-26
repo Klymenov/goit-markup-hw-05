@@ -10,6 +10,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/styles.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
 </head>
 <body>
 
@@ -21,8 +25,8 @@
                 <nav class="navigation">
                     <a class="logo" href="./index.html">Web<span class="header-studio">Studio</span></a>
                     <ul class="nav-list">
-                        <li class="nav-element">
-                            <a class="nav-link" href="./index.html">Студия</a>
+                        <li class="nav-element studio-header-border">
+                            <a class="nav-link studio-header-border" href="./index.html">Студия</a>
                         </li>
                         <li class="nav-element">
                             <a class="nav-link" href="./portfolio.html">Портфолио</a>
@@ -34,7 +38,7 @@
                 </nav>
 
                 <ul class="contact-list">
-                    <li class="contact-element"><a class="contact-link" href="mailto:info@devstudio.com"><svg class="contact-icon" width=16px height=12px><use href="./img/svg/icons/symbol-defs.svg#icon-mail"></use></svg>info@devstudio.com</a>
+                    <li class="contact-element "><a class="contact-link" href="mailto:info@devstudio.com"><svg class="contact-icon" width=16px height=12px><use href="./img/svg/icons/symbol-defs.svg#icon-mail"></use></svg>info@devstudio.com</a>
                     </li>
                     <li class="contact-element"><a class="contact-link" href="tel:+380961111111"><svg class="contact-icon" width=10px height=16px><use href="./img/svg/icons/symbol-defs.svg#icon-header-phone"></use></svg>+38 096 111 11 11</a>
                     </li>
@@ -53,7 +57,7 @@
             <div class="container">
                 <div class="hero-content">
                     <h1 class="hero-heading">Эффективные решения для вашего бизнеса</h1>
-                    <button class="hero-button" type="button">Заказать услугу</button>
+                    <button class="hero-button" type="button data-modal-open">Заказать услугу</button>
                 </div>
             </div>
         </section>
@@ -90,9 +94,18 @@
             <div class="container">
                 <h3 class="work-heading">Чем мы занимаемся</h3>
                 <ul class="work-list">
-                    <li class="work-element"><img src="./img/work/img.png" alt="img"></li>
-                    <li class="work-element"><img src="./img/work/img(1).png" alt="img"></li>
-                    <li class="work-element"><img src="./img/work/img(2).png" alt="img"></li>
+                    <li class="work-element">
+                        <img src="./img/work/img.png" alt="img">
+                        <p class="work-text">Десктопные приложения</p>
+                    </li>
+                    <li class="work-element">
+                        <img src="./img/work/img(1).png" alt="img">
+                        <p class="work-text">Мобильные приложения</p>
+                    </li>
+                    <li class="work-element">
+                        <img src="./img/work/img(2).png" alt="img">
+                        <p class="work-text">Дизайнерские решения</p>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -304,6 +317,16 @@
                 </div>
         </div>
     </footer>
-    
+
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button data-modal-close" class="close-modal">
+                <svg class="modal-close-icon">
+                    <use href="./img/svg/icons/symbol-defs.svg#icon-modal-close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
