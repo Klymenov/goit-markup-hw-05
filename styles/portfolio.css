@@ -73,6 +73,9 @@ body {
     color: #2196F3;
     text-decoration: none;
 }
+.header-portfolio-style {
+    color: #2196F3;
+}
 .contact-list {
     display: flex;
     list-style: none;
