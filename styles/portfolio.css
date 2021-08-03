@@ -5,6 +5,7 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
 }
+img {display: block;}
 *, *:after, *:before {
     box-sizing: border-box;
 }
@@ -13,7 +14,11 @@ body {
     padding: 0 15px;
     margin: 0 auto;
 }
-
+*:hover,
+*:focus {
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+}
 /*header section*/
 
 
@@ -234,6 +239,7 @@ button:hover,
 button:focus {
     background-color: #2196F3;
     color: white;
+    cursor: pointer;
 }
 button {
     font-family: 'Roboto', sans-serif;
@@ -249,8 +255,6 @@ button {
     padding: 6px 22px;
 }
 
-.card-set {
-}
 .card-list {
     display: flex;
     list-style: none;
@@ -386,9 +390,6 @@ button {
 .footer-element {
     margin-bottom: 9px;
 }
-.footer-adress {
-
-}
 .footer-adress-link {
     font-style: normal;
     font-weight: normal;
@@ -449,4 +450,63 @@ button {
     fill: #FFFFFF;
     height: 20px;
     width: 20px;
+}
+
+.footer-form-section {
+    padding: 0;
+    margin-left: 93px;
+}
+.footer-form-heading {
+    margin: 0;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-top: 12px;
+    margin-bottom: 20px;
+}
+.footer-form {
+    display: flex;
+}
+.footer-form-input {
+    color: #ffffff;
+    padding: 0;
+    margin-right: 12px;
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    background-color: #2F303A;
+    padding-left: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+.footer-form-input:focus {
+    outline: none;
+}
+.footer-subscribe {
+    display: flex;
+    border: none;
+    background-color: #2196F3;
+    width: 200px;
+    height: 50px;
+    border-radius: 4px;
+    padding: 10px 28px;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #fff;
+    cursor: pointer;
+}
+.footer-send-icon {
+    fill: white;
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
 }
