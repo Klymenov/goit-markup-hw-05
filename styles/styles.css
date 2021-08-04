@@ -16,8 +16,12 @@ img {display: block;}
     box-sizing: border-box;
 }
 
-*:hover,
+/* *:hover,
 *:focus {
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 1250ms;
+} */
+* {
     transition: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 250ms;
 }
@@ -284,9 +288,9 @@ img {display: block;}
 }
 .accents-heading {
     display: inline-block;
-    font-weight: 900;
+    font-weight: 700;
     font-size: 14px;
-    line-height: 16px;
+    line-height: calc((16 / 14) * 100%);
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #212121;
@@ -483,13 +487,9 @@ img {display: block;}
     list-style: none;
 }
 .clients-element {
-    /* display: flex; */
     margin-right: 30px;
     height: 92px;
     width: 170px;
-    /* border: 1px solid #AFB1B8; */
-    /* box-sizing: border-box; */
-    /* border-radius: 4px; */
     align-items: center;
     justify-content: center;
 }
@@ -502,7 +502,6 @@ img {display: block;}
     height: 92px;
     align-items: center;
     justify-content: center;
-    /* border-color: #2196F3; */
     fill: currentColor;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
